@@ -1,0 +1,35 @@
+<div id="#popupDialog" class="popup" ng-if="dialog">
+	<div class="popup-mask" ng-click="cancelDialog();"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col offset-4"></div>
+			<div class="col col-md-4 col-sm-12">
+				<div class="panel">
+					<div class="row">
+						<div class="col col-sm-12">
+							<h2>{{dialog.title}}</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col-sm-12">
+							<p ng-if="!dialog.use_text_area" ng-bind-html="dialog.content"></p>
+							<textarea ng-if="dialog.use_text_area" ng-bind-html="dialog.content" readonly></textarea>
+						</div>
+					</div>
+					<div class="row" ng-if="dialog.comment_rule == 'required' || dialog.comment_rule == 'optional'">
+						<div class="col col-sm-12">
+							<label>Comments <span>({{ ::dialog.comment_rule }})</span></label>
+							<textarea ng-model="dialog.comments" placeholder="{{ ::dialog.comment_rule }}"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col-sm-12 child-center controls">
+							<button class="{{dialog.confirm_class}}" ng-disabled="dialog.comment_rule == 'required' && !dialog.comments" ng-click="confirmDialog()">{{dialog.confirm_text}}</button>
+							<button class="button-default" ng-if="!dialog.hide_cancel_btn" ng-click="cancelDialog()">CANCEL</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

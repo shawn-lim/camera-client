@@ -1,0 +1,53 @@
+{
+  "name": "miab",
+  "version": "0.2.12",
+  "author": "Shawn Lim <shawn.lim@hotmail.ca>",
+  "contributors": [
+    {
+      "name": "Elle Kasai (CSS)",
+      "email": "elle.kasai@istuary.com"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-angular-templates": "~0.5",
+    "grunt-browser-output": "~1.0.1",
+    "grunt-bump": "^0.8.0",
+    "grunt-contrib-clean": "~0.6",
+    "grunt-contrib-concat": "~0.5",
+    "grunt-contrib-connect": "~0.8",
+    "grunt-contrib-copy": "~0.7",
+    "grunt-contrib-cssmin": "~0.10",
+    "grunt-contrib-htmlmin": "~0.3",
+    "grunt-contrib-jshint": "~0.10",
+    "grunt-contrib-uglify": "~0.6",
+    "grunt-contrib-watch": "~0.6",
+    "grunt-dom-munger": "~3.4",
+    "grunt-karma": "^2.0.0",
+    "grunt-ng-annotate": "^3.0.0",
+    "grunt-sass": "^1.2.1",
+    "grunt-string-replace": "^1.3.0",
+    "grunt-wiredep": "^1.9.0",
+    "jasmine": "^2.5.2",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "~0.1.5",
+    "karma-firefox-launcher": "~0.1.3",
+    "karma-jasmine": "~0.2.2",
+    "karma-mocha-reporter": "~0.3.1",
+    "karma-ng-html2js-preprocessor": "^0.1.2",
+    "karma-phantomjs-launcher": "*",
+    "load-grunt-config": "^0.16.0",
+    "load-grunt-tasks": "~1.0.0",
+    "mocha": "^3.2.0",
+    "node-sass": "^3.13.0",
+    "shipit-deploy": "^2.4.0",
+    "shipit-npm": "^0.2.0",
+    "wiredep": "^1.8.6"
+  },
+  "dependencies": {
+    "connect-modrewrite": "^0.8.5",
+    "express": "^4.13.4",
+    "phantomjs-prebuilt": "^2.1.14"
+  }
+}

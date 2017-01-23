@@ -1,0 +1,64 @@
+<div class="_register">
+  <div class="login-bg"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col col-sm-12 col-md-3 col-lg-4"></div>
+      <div class="col col-sm-12 col-md-6 col-lg-4 login-form">
+        <div class="panel-lg">
+          <form name="form" ng-submit="register()"> 
+            <h2 class="form-title">Banana Tree</h2>
+            <p><i>Get a Banana Tree account</i></p>
+            <div class="form-input">
+              <input  
+              name="email"
+              type="email"  
+              placeholder="Enter your email"  
+              ng-model="registration_form.email"  
+              required/>
+              <div class="text-small text-error" ng-messages="form.email.$error" ng-if="form.email.$touched"> 
+                <div ng-message="required">This field is required</div>
+                <div ng-message="email">This is not a valid email format</div>
+                <div ng-message="used">This email is already in use</div>
+              </div>
+            </div>
+            <div class="form-input">
+              <input  
+              name="pwd"  
+              type="password"  
+              placeholder="Enter your password"  
+              ng-model="registration_form.password" 
+              ng-minlength="6"  
+              required/>
+              <div class="text-small text-error" ng-messages="form.pwd.$error" ng-if="form.pwd.$touched"> 
+                <div ng-message="minlength">Password requires a minimum of 6 characters.</div>
+              </div>
+            </div>
+            <div class="form-input" ng-class="{'active' : registration_form.password_confirmation.length > 0}">
+              <input  
+              name="pwd_conf"  
+              type="password"  
+              placeholder="Confirm your password"  
+              ng-model="registration_form.password_confirmation"  
+              compare-to="registration_form.password" 
+              required/>
+              <div class="text-small text-error" ng-messages="form.pwd_conf.$error" ng-if="form.pwd_conf.$touched"> 
+                <div ng-message="compareTo">Your passwords do not match</div>
+              </div>
+            </div>
+            <div class="form-input">
+              <input name="name" type="text" placeholder="Your Name" ng-model="registration_form.name" required/>
+              <div class="text-small text-error" ng-messages="form.name.$error" ng-if="form.name.$touched"> 
+                <div ng-message="required">This field is required</div>
+              </div>
+            </div>
+            <div class="form-submit">
+              <button class="button-primary" type="submit" ng-disabled="!form.$valid">Sign Up</button>
+            </div>
+          </form>
+          <p class="child-center">or</p>
+          <a href="/login" class="strong">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

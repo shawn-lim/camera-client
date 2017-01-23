@@ -1,0 +1,34 @@
+/* ------------------------------
+Page - Login, Register
+------------------------------ */
+
+.login-bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('img/bg.jpg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+.login-form {
+  text-align: center;
+  .form-input {
+    margin-top: $spacing-large;
+    label {text-align: left;}
+    input {width: 100%;}
+    + .form-input {margin-top: $spacing-small;}
+  }
+  .form-submit { 
+    margin-top: $spacing-large; 
+    button.login-button{ 
+      min-width: 136px;
+    }
+  }
+  [ng-message]{
+    text-align: left;
+  }
+}

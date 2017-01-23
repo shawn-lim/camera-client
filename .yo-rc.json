@@ -1,0 +1,31 @@
+{
+  "generator-gb-angular": {
+    "uirouter": true,
+    "css": "Sass",
+    "partialDirectory": "partial/",
+    "directiveDirectory": "directive/",
+    "filterDirectory": "filter/",
+    "serviceDirectory": "service/",
+    "configDirectory": "config/",
+    "gruntDirectory": "grunt/",
+    "inject": {
+      "js": {
+        "file": "index.html",
+        "marker": "<!-- Add New Component JS Above -->",
+        "template": "<script src=\"<%= filename %>\"></script>"
+      },
+      "less": {
+        "relativeToModule": true,
+        "file": "<%= module %>.less",
+        "marker": "/* Add Component LESS Above */",
+        "template": "@import \"<%= filename %>\";"
+      },
+      "scss": {
+        "relativeToModule": true,
+        "file": "<%= module %>.scss",
+        "marker": "/* Add Component Sass Above */",
+        "template": "@import \"<%= filename %>\";"
+      }
+    }
+  }
+}

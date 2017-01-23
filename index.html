@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="miab">
+  <head>
+    <title></title>
+    <base href="/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="action-cable-url" content="ws://10.0.110.158:4000/cable"/>
+    <meta charset="utf-8">
+
+    <link href="app.css" type="text/css" rel="stylesheet">
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="/bower_components/textAngular/dist/textAngular.css" />
+    <link rel="stylesheet" href="/bower_components/angular-tooltips/dist/angular-tooltips.min.css" />
+    <link rel="stylesheet" href="/bower_components/ng-table/dist/ng-table.min.css" />
+    <link rel="stylesheet" href="/bower_components/angular-toastr/dist/angular-toastr.css" />
+    <!-- endbower -->
+  </head>
+  <body>
+
+    <!-- Livereload script for development only (stripped during dist build) -->
+    <!--<script src="http://localhost:35729/livereload.js" data-concat="false"></script>-->
+
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/jQuery.dotdotdot/src/js/jquery.dotdotdot.js"></script>
+    <script src="bower_components/angular-order-object-by/src/ng-order-object-by.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+    <script src="bower_components/angular-cookie/angular-cookie.js"></script>
+    <script src="bower_components/ng-token-auth/dist/ng-token-auth.js"></script>
+    <script src="bower_components/rangy/rangy-core.js"></script>
+    <script src="bower_components/rangy/rangy-classapplier.js"></script>
+    <script src="bower_components/rangy/rangy-highlighter.js"></script>
+    <script src="bower_components/rangy/rangy-selectionsaverestore.js"></script>
+    <script src="bower_components/rangy/rangy-serializer.js"></script>
+    <script src="bower_components/rangy/rangy-textrange.js"></script>
+    <script src="bower_components/textAngular/dist/textAngular.js"></script>
+    <script src="bower_components/textAngular/dist/textAngular-sanitize.js"></script>
+    <script src="bower_components/textAngular/dist/textAngularSetup.js"></script>
+    <script src="bower_components/angular-tooltips/dist/angular-tooltips.min.js"></script>
+    <script src="bower_components/angular-filter/dist/angular-filter.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/highcharts/highcharts.js"></script>
+    <script src="bower_components/highcharts/highcharts-more.js"></script>
+    <script src="bower_components/highcharts/modules/exporting.js"></script>
+    <script src="bower_components/ng-table/dist/ng-table.min.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="bower_components/angular-websocket/dist/angular-websocket.js"></script>
+    <script src="bower_components/angular-actioncable/dist/angular-actioncable.js"></script>
+    <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/socket.io-client/dist/socket.io.js"></script>
+    <!-- endbower -->
+    <script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script type="text/javascript" src="http://cdn.robotwebtools.org/mjpegcanvasjs/current/mjpegcanvas.min.js"></script>
+
+
+    <!-- Main App JS -->
+    <script src="app.js"></script>
+    <script src="config/routes.js"></script>
+
+    <script src="directive/dialog/dialog.js"></script>
+
+    <script src="partial/main/main.js"></script>
+    <script src="directive/navbar/navbar.js"></script>
+    <script src="service/UserService/UserService.js"></script>
+    <script src="service/SystemService/SystemService.js"></script>
+    <script src="service/APIService/APIService.js"></script>
+    <script src="partial/login/login.js"></script>
+    <script src="partial/register/register.js"></script>
+    <script src="directive/compareTo.js"></script>
+    <script src="service/SocketService/SocketService.js"></script>
+    <!-- Add New Component JS Above -->
+
+    <dialog></dialog>
+    <navbar></navbar>
+    <main ui-view></main>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+{
+    "requests": {'/client_version'},
+    "responses": {}
+}

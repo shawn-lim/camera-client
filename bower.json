@@ -1,0 +1,53 @@
+{
+  "name": "miab",
+  "version": "0.0.0",
+  "main": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.4.7",
+    "angular": "~1.5",
+    "angular-mocks": "~1.5",
+    "font-awesome": "~4.4.0",
+    "animate.css": "~3.4.0",
+    "jquery": "~2.1.4",
+    "angular-ui-router": "~0.2.15",
+    "angular-route": "~1.4.7",
+    "jQuery.dotdotdot": "~1.7.4",
+    "angular-order-object-by": "~1.2.1",
+    "angular-scroll": "~1.0.0",
+    "ng-token-auth": "~0.0.28",
+    "textAngular": "~1.5.0",
+    "angular-tooltips": "~1.0.7",
+    "angular-filter": "~0.5.8",
+    "angular-resource": "~1.3",
+    "angular-ui-utils": "~0.1.1",
+    "moment": "~2.8",
+    "underscore": "~1.7",
+    "highcharts": "highcharts-release#~4.2.3",
+    "ng-table": "~0.8.3",
+    "angular-toastr": "~2.1.1",
+    "angular-actioncable": "~1.1.0",
+    "ng-lodash": "^0.5.0",
+    "angular-messages": "^1.6.1",
+    "socket.io-client": "^1.7.2"
+  },
+  "resolutions": {
+    "angular": "1.5.0"
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css"
+      ]
+    },
+    "socket.io-client": {
+      "main": [
+        "dist/socket.io.js"
+      ]
+    }
+  }
+}
