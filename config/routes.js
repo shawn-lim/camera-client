@@ -45,6 +45,10 @@ angular.module('miab').config(function($stateProvider) {
       templateUrl: 'partial/register/register.html',
       controller: 'RegisterCtrl'
     });
+  $stateProvider.state('camera', {
+      url: '/camera',
+      templateUrl: 'partial/camera/camera.html'
+    });
   /* Add New States Above */
 });
 
