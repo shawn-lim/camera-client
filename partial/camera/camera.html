@@ -1,5 +1,9 @@
 <div class="_camera" ng-controller="CameraCtrl">
-  <div class="stream-container" ng-click="snap()">
-    <canvas id="placeholder_canvas" width="928" height="616"></canvas>
-  </div>
+  <section class="live-view-section">
+  <a href="#" class="stream-container" ng-click="snap()">
+    <div class="shoot-button"><i class="fa fa-camera"></i></div>
+    <canvas id="live-view" width="948" height="636"></canvas>
+    <div class="screenshot-effect" ng-show="shot_taken" ng-class="{'fadeout':shot_taken}"></div>
+  </a>
+  </section>
 </div>

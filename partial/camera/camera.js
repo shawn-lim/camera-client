@@ -1,7 +1,7 @@
 (function () { 'use strict';}());
 
-angular.module('miab').controller('CameraCtrl',function($scope, SocketService){
-  var canvas = document.getElementById("placeholder_canvas");
+angular.module('miab').controller('CameraCtrl',function($scope, $timeout, toastr, SocketService){
+  var canvas = document.getElementById("live-view");
   var ctx = canvas.getContext("2d");
   var img = new Image();
 
@@ -9,6 +9,7 @@ angular.module('miab').controller('CameraCtrl',function($scope, SocketService){
     ctx.drawImage(img, 0, 0); 
     img.src = "";
   };
+  img.src = "/img/bg.jpg";
 
   SocketService.on('liveview', function(stream){
     img.src = "data:image/jpg;base64," + stream;
@@ -18,12 +19,19 @@ angular.module('miab').controller('CameraCtrl',function($scope, SocketService){
     SocketService.emit('liveview:start');
   };
   $scope.stopStream = function(){
-    SocketService.emit('liveview:stop');
-    $scope.clearCanvas();
+    SocketService.emit('liveview:stop', null, function(){
+      $scope.clearCanvas();
+    });
   };
 
   $scope.snap = function(){
-    SocketService.emit('camera:shoot');
+    $scope.shot_taken = false;
+    SocketService.emit('camera:shoot', {ids: [0,1,2]});
+    toastr.success('Snapped successfully sent!', 'Snapped!');
+    $scope.shot_taken = true;
+    $timeout(function(){
+      $scope.shot_taken = false;
+    }, 500)
   };
 
   $scope.camera_info = {
